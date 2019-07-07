@@ -68,8 +68,8 @@
 - name: Wait for Reboot
   local_action: wait_for
   args:
-    host: "{{ inventory_hostname }}"
+    host: "{{ ansible_host }}"
     port: 22
-    delay: 15
-    timeout: 120
+    delay: 10
+    timeout: 600
   become: False
